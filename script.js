@@ -52,7 +52,8 @@
         marker: {
           lineWidth: 1,
           lineColor: "#000",
-          symbol: "mapmarker",
+          // symbol: "mapmarker",
+          symbol: "url(./marker.svg)",
           radius: 8,
         },
         dataLabels: {
@@ -70,13 +71,15 @@
       useHTML: true,
       formatter: function () {
         return (
-          "<div style='width: 100px; height: 100px;text-align: center; display: flex; flex-direction: column; justify-content: center;'><div><img src='" +
+          "<div style='width: 160px; height: 110px;text-align: center; display: flex; flex-direction: column; justify-content: space-between; padding: 8px;'><div><img src='" +
           this.point.image +
           "' style='max-width: 100px;'></div>" +
           "<p style='text-align: center;'>" +
+          this.point.name +
+          "</p><b style='text-align: center;'>" +
           this.point.y +
           " miliar*" +
-          "</p></div>"
+          "</b></div>"
         );
       },
     },
@@ -95,28 +98,42 @@
         },
         enableMouseTracking: false,
         showInLegend: false,
-        borderColor: "rgba(0, 0, 0, 0.25)",
-        nullColor: "rgba(72 114 206 / 0.4 )",
+        borderColor: "rgba(255, 255, 255,0.5)",
+        nullColor: "#073F6A",
       },
       {
         name: "",
-        color: "rgb(241, 92, 128)",
+        color: "#05AFAA",
         data: [
           [
             "id-ba",
-            -8.2955908,
-            115.1877154,
+            -8.095400260654107,
+            115.03035364089623,
             "Bali Beyond Travel Fair 2023",
             11,
             "./img/bbtf.png",
           ],
-          ["id-ba", -8.8285465, 115.2129977, "G20", 17.7, "./img/g20.png"],
-          ["id-nb", -8.699408, 116.2035749, "MotoGP", 4.6, "./img/motogp.png"],
-          ["id-nb", -8.899408, 116.3035749, "WSBK ", 5.2, "./img/sblmotul.png"],
+          [
+            "id-ba",
+            -8.528403475889711,
+            115.21557343611535,
+            "G20",
+            17.7,
+            "./img/g20.png",
+          ],
+          [
+            "id-nb",
+            -8.499254295968968,
+            116.30614446629004,
+            "MotoGP",
+            4.6,
+            "./img/motogp.png",
+          ],
+          ["id-nb", -8.299408, 116.1035749, "WSBK ", 5.2, "./img/sblmotul.png"],
           [
             "id-yo",
-            -7.7520153,
-            110.4866018,
+            -7.651829238055708,
+            110.49143520859982,
             "Asian tourism forum 2023",
             2.1,
             "./img/asean.png",
